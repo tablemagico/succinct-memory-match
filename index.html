@@ -196,20 +196,35 @@
             font-size: 1rem;
         }
 
-        @media (max-width: 500px) {
-            :root {
-                --card-size: 80px;
-            }
+        /* ---------- CREDITS ---------- */
+        #credits {
+            position: fixed;
+            bottom: 1.2rem;
+            /* çok dipte durmasın */
+            right: 1.2rem;
+            /* “çok da sağda” olmasın dedin, 1.2 rem iyi durur */
+            max-width: 160px;
+            font-size: 1.15rem;
+            line-height: 1.3;
+            text-align: right;
+            opacity: .6;
+            /* silik görünüm */
+        }
 
-            #board {
-                grid-gap: 6px;
-            }
+        #credits a {
+            color: #0a7aff;
+            /* klasik mavi ton */
+            text-decoration: underline;
+        }
 
-            h1 {
-                font-size: 1.6rem;
-            }
 
-            /* başlığı küçülttük */
+        /* mobilde biraz içeri çek */
+        @media (max-width:500px) {
+            #credits {
+                bottom: .6rem;
+                right: .6rem;
+                font-size: .75rem;
+            }
         }
     </style>
 </head>
@@ -254,6 +269,12 @@
             <p id="sc-score">Score: 0/8</p>
             <p id="sc-time">Time left: 0s</p>
         </div>
+    </div>
+
+    <div id="credits">
+        created by:<br>
+        <a href="https://twitter.com/cryptoayax" target="_blank">x:cryptoayax</a><br>
+        discord: cryptoayax
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
